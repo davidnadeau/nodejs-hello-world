@@ -1,4 +1,9 @@
+# ignore node files
 /node_modules
-.idea
 /bin
+
+# ignore ide files
+.idea
+
+# ignore server key
 *.pem
