@@ -1,0 +1,6 @@
+# ignore node files
+/node_modules
+/bin
+
+# ignore ide files
+.idea

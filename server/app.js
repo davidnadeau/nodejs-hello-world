@@ -21,7 +21,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // mount all the applications
-app.use('/', require("./routes/bookmark"));
+app.use('/', require("./routes/bookmark/index"));
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
