@@ -1,6 +1,7 @@
 module.exports = function(app) {
-    // non object specific routes here
+    app.get('/', function (req, res) {
+        res.send("HOME");
+    });
 
-    // bookmark specific routes defined in bookmarks
-    require('./bookmark/index')(app);
+    require('./bookmark')(app);
 };

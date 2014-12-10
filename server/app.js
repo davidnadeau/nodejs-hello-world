@@ -8,6 +8,9 @@ var db = require('./mongoose');
 
 var app = express();
 
+// http request setup
+require('./routes')(app);
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -19,9 +22,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
-// mount all the applications
-app.use('/', require("./routes/bookmark/index"));
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
